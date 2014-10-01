@@ -35,6 +35,10 @@ module Attrio
       @default_value
     end
 
+    def allow_blank?
+      @allow_blank ||= self.options[:allow_blank]
+    end
+
     def reset!
       raise ArgumentError if self.object.nil?
 
